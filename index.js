@@ -1,8 +1,18 @@
-var currentLocation = 'New York';
+var currentLocation = 'New York City';
+var lat = 40.7128;
+var long = -74.0060;
+
 var weatherApiKey = '';
 // Set the weather api key
 if(queryStringParameters.has('weatherApiKey')){
     weatherApiKey = queryString('weatherApiKey');
+}
+
+if(queryStringParameters.has('lat')){
+    lat = queryString('lat');
+}
+if(queryStringParameters.has('long')){
+    long = queryString('long');
 }
 
 window.addEventListener('load', function(event) {
@@ -68,7 +78,7 @@ function updateClock(){
 
 function updateWeather() {
     if(weatherApiKey == '') return;
-    var api = `https://api.openweathermap.org/data/2.5/weather?q=${currentLocation}&appid=${weatherApiKey}`;
+    var api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${weatherApiKey}`;
     fetch(api)
     .then(function (response) {
             let data = response.json();
@@ -76,12 +86,12 @@ function updateWeather() {
         })
         .then(function (data) {
             const kelvin = 273.15;
-            var celcius = Math.floor(data.main.temp - kelvin);
-            var min = Math.floor(data.main.temp_min - kelvin);
-            var max = Math.floor(data.main.temp_max - kelvin);
-            var description = data.weather[0].description;
+            var celcius = Math.floor(data.current.temp - kelvin);
+            var min = Math.floor(data.daily[0].temp.min - kelvin);
+            var max = Math.floor(data.daily[0].temp.max - kelvin);
+            var description = data.current.weather[0].description;
             description = description[0].toUpperCase() + description.substring(1);
-            var icon = data.weather[0].icon;
+            var icon = data.current.weather[0].icon;
 
             var celciusElement = document.querySelector('.celcius');
             var minElement = document.querySelector('.temp-min');
