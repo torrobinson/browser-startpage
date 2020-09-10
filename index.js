@@ -55,14 +55,27 @@ function updateClock(){
     var date = document.querySelector('.date');
 
     var now = new Date();
-    clock.innerHTML = formatDate(now, "hh:mmtt");
+    var hours = now.getHours();
+    clock.innerHTML = formatDate(now, "hh:mm");
     weekday.innerHTML = formatDate(now, "dddd");
     date.innerHTML = formatDate(now, "MMM d, yyyy");
+
+    // am/pm
+    var isPm = hours >= 12;
+    var am = document.querySelector('.am');
+    var pm = document.querySelector('.pm');
+    if(isPm){
+        pm.classList.add('active');
+        am.classList.remove('active');
+    }
+    else{
+        pm.classList.remove('active');
+        am.classList.add('active');
+    }
 
     // Set greeting based on time
     var greeting = document.querySelector('.greeting');
     if(greeting){
-        var hours = now.getHours();
         var greetingMessage = 'Welcome';
         if(hours >=6 && hours < 12)
             greetingMessage = "Good Morning"
@@ -111,9 +124,9 @@ function updateWeather() {
             var actualIcon = '';
             switch(icon.substring(0,2)){
                 case '01':
+                case '02':
                     actualIcon = 'sun';
                     break;
-                case '02':
                 case '03':
                 case '04':
                     actualIcon = 'cloud';

@@ -2,7 +2,7 @@
 :root {
     --pink: #e39bdd;
     --blue: #a1a1f1;
-    --black: #3a3a3a;
+    --black: #525457;
     --white: #f5f5f5;
 }
 
@@ -66,6 +66,22 @@ body{
 .clock{
     font-weight: 600;
     font-size: 120px;
+    display: inline-block;
+}
+.ampm{
+    display: inline-block;
+    height: 97px;
+    font-size: 33px;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 8px;
+    margin-left: 12px;
+}
+.am,.pm{
+    opacity: 0.2;
+}
+.am.active,.pm.active{
+    opacity: 1.0;
 }
 .weekday{
     font-weight: 600;
