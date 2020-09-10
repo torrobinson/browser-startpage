@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --pink: #e39bdd;
     --blue: #a1a1f1;
@@ -5,23 +6,24 @@
     --white: #f5f5f5;
 }
 
+
+/* Global color overrides */
+html{
+    color: var(--black);
+    background-color: var(--white);
+}
 @media (prefers-color-scheme: dark) {
     html{
-        font-color: var(--white);
+        color: var(--white);
         background-color: var(--black);
     }
 }
 
-@media (prefers-color-scheme: light) {
-    html{
-        font-color: var(--black);
-        background-color: var(--white);
-    }
-}
 
 html{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    font-size: 21px;
     padding:0px;
     margin:0px;
 }
@@ -35,15 +37,36 @@ body{
     justify-content: center;
 }
 
+
 .text-center{
     text-align: center;
 }
 
+/* Make flexgrid rows full-width */
 .row{
     width: 100%;
 }
 
+/* Clock column*/
 .clock{
     font-weight: 600;
-    font-size: 90px;
+    font-size: 120px;
+}
+.weekday{
+    font-weight: 600;
+    font-size: 31px;
+}
+
+/* Date + weather column */
+.date{
+    font-size: 26px;
+}
+.weather-holder{
+    width: 64px;
+    color: var(--blue);
+    margin: auto;
+}
+.weather-icon{
+    width: 54px;
+    height: 54px;
 }
