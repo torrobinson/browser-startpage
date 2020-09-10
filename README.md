@@ -9,6 +9,6 @@ For use as either a new-tab page or a homepage in your web browser.
   - OR use this plugin for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) or [Chrome](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia) to set it as the new tab page (preferred)
 -  In the URL, include query string parameters:
    -  `name` (optional) - your name for a customized greeting
-   -  `locationName` (required) - your location that will be displayed
+   -  `location` (required) - your location that will be displayed
    -  `lat` (required), `lat` (required) - your location coordinates for fetching weather 
    -  `weatherApiKey` (required) - the API key you generated for yourself, as mentioned above
