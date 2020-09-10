@@ -102,19 +102,25 @@ function updateWeather() {
             switch(icon.substring(0,2)){
                 case '01':
                     actualIcon = 'sun';
+                    break;
                 case '02':
                 case '03':
                 case '04':
                     actualIcon = 'cloud';
+                    break;
                 case '09':
                 case '10':
                     actualIcon = 'cloud-rain';
+                    break;
                 case '11':
                     actualIcon = 'cloud-lightning';
+                    break;
                 case '13':
                     actualIcon = 'cloud-snow';
+                    break;
                 case '50':
                     actualIcon = 'align-center'; // looks like mist lol
+                    break;
                 default:
                     actualIcon = 'cloud';
             }
