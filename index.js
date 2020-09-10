@@ -119,7 +119,7 @@ function updateWeather() {
                     actualIcon = 'cloud-snow';
                     break;
                 case '50':
-                    actualIcon = 'align-center'; // looks like mist lol
+                    actualIcon = 'wind';
                     break;
                 default:
                     actualIcon = 'cloud';
