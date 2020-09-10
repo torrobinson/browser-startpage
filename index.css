@@ -63,7 +63,6 @@ body{
 }
 .weather-holder{
     width: 64px;
-    color: var(--blue);
     margin: auto;
 }
 .weather-icon{
