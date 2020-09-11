@@ -98,18 +98,19 @@ body{
     margin-top: -15px;
 }
 .weather-icon svg{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 .weather-details-holder{
     padding-top: 36px;
-    padding-left: 36px;
+    padding-left: 26px;
 }
 .temperature-holder{
     font-size: 120px;
     font-weight: 600;
     white-space: nowrap;
     position: relative;
+    right: -19px;
 }
 .temperature-holder .degree{
     font-size: 54px;
