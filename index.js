@@ -1,3 +1,4 @@
+// Default weather information until the user provides one
 var currentLocation = 'New York City';
 var lat = 40.7128;
 var long = -74.0060;
@@ -142,7 +143,7 @@ function updateWeather() {
                     actualIcon = 'cloud-snow';
                     break;
                 case '50':
-                    actualIcon = 'wind';
+                    actualIcon = 'wind'; // this icon looks like it could be mist :)
                     break;
                 default:
                     actualIcon = 'cloud';
