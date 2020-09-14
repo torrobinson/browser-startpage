@@ -92,17 +92,16 @@ function updateClock(){
 
 function updateWeather() {
     if(weatherApiKey == '') return;
-    var api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${weatherApiKey}`;
+    var api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${weatherApiKey}&units=metric`;
     fetch(api)
     .then(function (response) {
             let data = response.json();
             return data;
         })
         .then(function (data) {
-            const kelvin = 273.15;
-            var celcius = Math.floor(data.current.temp - kelvin);
-            var min = Math.floor(data.daily[0].temp.min - kelvin);
-            var max = Math.floor(data.daily[0].temp.max - kelvin);
+            var celcius = Math.floor(data.current.temp);
+            var min = Math.floor(data.daily[0].temp.min);
+            var max = Math.floor(data.daily[0].temp.max);
             var description = data.current.weather[0].description;
             description = description[0].toUpperCase() + description.substring(1);
             var icon = data.current.weather[0].icon;
