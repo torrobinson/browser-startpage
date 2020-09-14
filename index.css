@@ -38,6 +38,28 @@ body{
 }
 
 
+.warning{
+    position: absolute;
+    bottom: 11px;
+    background-color: #f99;
+    padding: 20px;
+    border-radius: 7px;
+    width: calc(100% - 20px);
+}
+
+.warning.hide{
+    display: none;
+}
+.warning .warning-title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+.mono{
+    font-family: 'Roboto Mono', monospace;
+}
+
 .text-center{
     text-align: center;
 }
@@ -127,5 +149,4 @@ body{
     display: inline;
     position: relative;
     top: -4px;
-    font-family: 'Roboto Mono', monospace;
 }

@@ -23,6 +23,19 @@
 
     </head>
     <body>
+
+        <div class="key-warning warning hide">
+            <div class="warning-title">Missing parameter</div> Please add a query string parameter to this request called <span class="mono">weatherApiKey</span> with your API key from <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a>
+        </div>
+
+        <div class="coord-warning warning hide">
+            <div class="warning-title">Missing parameter</div> Please add query string parameters to this request called <span class="mono">lat</span> and <span class="mono">long</span> with coordinates for your city
+        </div>
+
+        <div class="location-warning warning hide">
+            <div class="warning-title">Missing parameter</div> Please add query string parameter to this request called <span class="mono">location</span> with whatever you want your location called
+        </div>
+
         <div class="row">
             <div class="text-center col-xs-12 col-md-6">
                 <div class="greeting-holder">
@@ -53,11 +66,11 @@
                                     <div class="min-max-holder">
                                         <div class="temp-max-holder">
                                             <i data-feather="arrow-up"></i>
-                                            <div class="temp-max"></div>
+                                            <div class="temp-max mono"></div>
                                         </div>
                                         <div class="temp-min-holder">
                                             <i data-feather="arrow-down"></i>
-                                            <div class="temp-min"></div>
+                                            <div class="temp-min mono"></div>
                                         </div>
                                     </div>
                             </div>

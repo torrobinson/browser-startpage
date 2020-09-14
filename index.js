@@ -1,30 +1,43 @@
 // Default weather information until the user provides one
-var currentLocation = 'New York City';
+var currentLocation = '';
 var lat = 40.7128;
 var long = -74.0060;
-
 var weatherApiKey = '';
-// Set the weather api key
-if(queryStringParameters.has('weatherApiKey')){
-    weatherApiKey = queryString('weatherApiKey');
-}
-
-if(queryStringParameters.has('lat')){
-    lat = queryString('lat');
-}
-if(queryStringParameters.has('long')){
-    long = queryString('long');
-}
 
 window.addEventListener('load', function(event) {
+    // Set the weather api key
+    if(queryStringParameters.has('weatherApiKey')){
+        weatherApiKey = queryString('weatherApiKey');
+    }
+    else{
+        document.querySelector('.key-warning').classList.remove('hide');
+    }
+
+    // Set the Coordinates
+    if(queryStringParameters.has('lat')){
+        lat = queryString('lat');
+    }
+    else{
+        document.querySelector('.coord-warning').classList.remove('hide');
+    }
+    if(queryStringParameters.has('long')){
+        long = queryString('long');
+    }
+    else{
+        document.querySelector('.coord-warning').classList.remove('hide');
+    }
+
     // Update the clock once per second
     updateClock();
     setInterval(updateClock, 1000);
 
-    // Default the location
+    // Update the location
     var locationElement = document.querySelector('.location');
     if(queryStringParameters.has('location')){
         currentLocation = queryString('location');
+    }
+    else{
+        document.querySelector('.location-warning').classList.remove('hide');
     }
     locationElement.innerHTML = currentLocation;
 
