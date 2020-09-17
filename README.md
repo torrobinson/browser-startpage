@@ -1,6 +1,8 @@
 # browser-startpage
+![Image of Yaktocat](https://github.com/torrobinson/browser-startpage/raw/master/browser-startpage-preview.png)
 Basic page displaying the date, time, and weather.
 Inspired by [MiguelRAvila](https://github.com/MiguelRAvila/Bento).
+
 For use as either a new-tab page or a homepage in your web browser.
 
 ## Usage:
