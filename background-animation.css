@@ -10,6 +10,7 @@
 }
 .squares li{
     background: var(--background-square-color);
+    box-shadow: 0px 0px 20px var(--background-square-color);
 }
 @media (prefers-color-scheme: dark) {
     .background{
@@ -17,6 +18,7 @@
     }
     .squares li{
         background: var(--dark-background-square-color);
+        box-shadow: 0px 0px 20px var(--dark-background-square-color);
     }
 }
 
