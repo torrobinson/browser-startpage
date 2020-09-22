@@ -1,13 +1,24 @@
 /* Variables */
 :root {
-    --pink: #e39bdd;
-    --blue: #a1a1f1;
+
+    /* Background Colors */
+    --col1: #e39bdd;
+    --col2: #a1a1f1;
+    --dark-col1: #664563;
+    --dark-col2: #373757;
+
+    /* Background animation colors */
+    --background-square-color: rgba(0, 0, 0, 0.2);
+    --dark-background-square-color: rgba(255, 255, 255, 0.2);
+
+    /* Text colors */
     --black: #525457;
     --white: #f5f5f5;
+    
 }
 
 
-/* Global color overrides */
+/* Color overrides */
 html{
     color: var(--black);
     background-color: var(--white);
@@ -36,7 +47,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 
 .warning{
     position: absolute;
