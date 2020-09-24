@@ -2,8 +2,9 @@
 ![Image of Yaktocat](https://github.com/torrobinson/browser-startpage/raw/master/browser-startpage-preview.png)
 Basic page displaying the date, time, and weather.
 Inspired by [MiguelRAvila](https://github.com/MiguelRAvila/Bento).
-
 For use as either a new-tab page or a homepage in your web browser.
+
+## [View Demo](https://www.torrobinson.com/browser-startpage/?weatherApiKey=your%20key&name=your%20name&location=your%20location&lat=00.00000&long=00.00000)
 
 ## Usage:
 - Get an API key from https://openweathermap.org/ (it's free). It may take up to an hour for your key to become valid, so do this in advance
