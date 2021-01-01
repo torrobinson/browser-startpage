@@ -19,3 +19,17 @@ For use as either a new-tab page or a homepage in your web browser.
    -  `col2` (optional) - The secondary background gradient color to use (system light mode) (remember to URL-escape the # hex color codes to `%23`)
    -  `dark-col1` (optional) - The primary background gradient color to use (system dark mode) (remember to URL-escape the # hex color codes to `%23`)
    -  `dark-col2` (optional) - The secondary background gradient color to use (system dark mode) (remember to URL-escape the # hex color codes to `%23`)
+   
+## Sample Querystring:
+```
+.../browser-startpage/index.html?
+&weatherApiKey=[your key here]
+&name=John
+&location=New York
+&lat=40.7128
+&long=74.0060
+&dark-col1=%23ff0048
+&dark-col2=%233A2B7B
+&col1=%23ff5777
+&col2=%23ca58a3
+```
