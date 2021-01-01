@@ -87,3 +87,8 @@ function queryString(name){
     if(queryStringParameters.has(name)) return queryStringParameters.get(name);
     else return undefined;
 }
+
+
+function setCssVar(key, value){
+    document.documentElement.style.setProperty('--'+ key, value);
+}

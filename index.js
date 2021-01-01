@@ -55,11 +55,24 @@ window.addEventListener('load', function(event) {
         }
     }
 
+    // Check and set any css variables from the querystring
+    // Remember to replace # in color hex codes with %23
+    ['col1','col2','dark-col1','dark-col2'].forEach(colorName => {
+        // If it was provided
+        if(queryStringParameters.has(colorName)){
+            // Set the CSS variable named that
+            setCssVar(
+                colorName, 
+                unescape(queryString(colorName)) // to the value from the querystring
+            );
+        }
+    });
+
     // Update weather every 5 minutes
     updateWeather();
     setInterval(updateWeather, 300000);
 
-
+    // Swap in weather icons
     feather.replace();
 });
 
