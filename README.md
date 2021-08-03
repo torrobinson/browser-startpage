@@ -30,8 +30,10 @@ For use as either a new-tab page or a homepage in your web browser.
 &location=New York
 &lat=40.7128
 &long=74.0060
-&dark-col1=%23ff0048
-&dark-col2=%233A2B7B
+&dark-text-col=%23DA7489
+&dark-col1=%231C1E26
+&dark-col2=%2322232D
+&text-col=%236b0933
 &col1=%23ff5777
 &col2=%23ca58a3
 ```
