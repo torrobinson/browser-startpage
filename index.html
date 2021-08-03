@@ -1,104 +1,124 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-         <title>Start Page</title>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Start Page</title>
 
-        <!-- Our stuff -->
-        <link type="text/css" rel="stylesheet" href="./reset.css" />
-        <link type="text/css" rel="stylesheet" href="./index.css?v=6" />
-        <link type="text/css" rel="stylesheet" href="./background-animation.css?v=6" />
-        <script type="text/javascript" src="./helpers.js?v=6"></script>
-        <script type="text/javascript" src="./index.js?v=6"></script>
+		<!-- Our stuff -->
+		<link type="text/css" rel="stylesheet" href="./reset.css" />
+		<link type="text/css" rel="stylesheet" href="./index.css?v=7" />
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="./background-animation.css?v=7"
+		/>
+		<script type="text/javascript" src="./helpers.js?v=7"></script>
+		<script type="text/javascript" src="./index.js?v=7"></script>
 
+		<!-- Flexbox for grid helpers -->
+		<link type="text/css" rel="stylesheet" href="./flexboxgrid.min.css" />
 
+		<!-- Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap"
+			rel="stylesheet"
+		/>
 
-        <!-- Flexbox for grid helpers -->
-        <link type="text/css" rel="stylesheet" href="./flexboxgrid.min.css" />
+		<!-- Feather Icons -->
+		<script src="https://unpkg.com/feather-icons"></script>
+	</head>
+	<body>
+		<div class="background">
+			<ul class="squares">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+		<div class="key-warning warning hide">
+			<div class="warning-title">Missing parameter</div>
+			Please add a query string parameter to this request called
+			<span class="mono">weatherApiKey</span> with your API key from
+			<a href="https://openweathermap.org/api" target="_blank"
+				>OpenWeather</a
+			>
+		</div>
 
-        <!-- Feather Icons -->
-        <script src="https://unpkg.com/feather-icons"></script>
+		<div class="coord-warning warning hide">
+			<div class="warning-title">Missing parameter</div>
+			Please add query string parameters to this request called
+			<span class="mono">lat</span> and
+			<span class="mono">long</span> with coordinates for your city
+		</div>
 
-    </head>
-    <body>
+		<div class="location-warning warning hide">
+			<div class="warning-title">Missing parameter</div>
+			Please add query string parameter to this request called
+			<span class="mono">location</span> with whatever you want your
+			location called
+		</div>
 
-        <div class="background" >
-            <ul class="squares">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+		<div class="row">
+			<div class="text-center col-xs-12 col-md-6">
+				<div class="greeting-holder">
+					<div class="greeting"></div>
+					<div class="name"></div>
+				</div>
+				<div class="clock"></div>
 
-        <div class="key-warning warning hide">
-            <div class="warning-title">Missing parameter</div> Please add a query string parameter to this request called <span class="mono">weatherApiKey</span> with your API key from <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a>
-        </div>
+				<div class="ampm">
+					<div class="am">am</div>
+					<div class="pm">pm</div>
+				</div>
 
-        <div class="coord-warning warning hide">
-            <div class="warning-title">Missing parameter</div> Please add query string parameters to this request called <span class="mono">lat</span> and <span class="mono">long</span> with coordinates for your city
-        </div>
+				<div class="weekday"></div>
+				<div class="date"></div>
+			</div>
+			<div class="text-center col-xs-12 col-md-6">
+				<div class="weather-holder text-center">
+					<div class="location-holder">
+						<div class="location"></div>
+					</div>
+					<div class="row">
+						<div class="temperature-holder text-right col-xs-6">
+							<span class="celcius">0</span
+							><span class="degree">°</span>
+						</div>
+						<div class="col-xs-6">
+							<div class="weather-details-holder text-left">
+								<div class="weather-description">
+									loading...
+								</div>
+								<div class="min-max-holder">
+									<div class="temp-max-holder">
+										<i data-feather="arrow-up"></i>
+										<div class="temp-max mono">0</div>
+									</div>
+									<div class="temp-min-holder">
+										<i data-feather="arrow-down"></i>
+										<div class="temp-min mono">0</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-        <div class="location-warning warning hide">
-            <div class="warning-title">Missing parameter</div> Please add query string parameter to this request called <span class="mono">location</span> with whatever you want your location called
-        </div>
-
-        <div class="row">
-            <div class="text-center col-xs-12 col-md-6">
-                <div class="greeting-holder">
-                    <div class="greeting"></div><div class="name"></div>
-                </div>
-                <div class="clock"></div>
-
-                <div class="ampm">
-                    <div class="am">am</div>
-                    <div class="pm">pm</div>
-                </div>
-
-                <div class="weekday"></div>
-                <div class="date"></div>
-            </div>
-            <div class="text-center col-xs-12 col-md-6">
-                <div class="weather-holder text-center">
-                    <div class="location-holder">
-                        <div class="location"></div>
-                    </div>
-                    <div class="row">
-                        <div class="temperature-holder text-right col-xs-6">
-                            <span class="celcius">0</span><span class="degree">°</span>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="weather-details-holder text-left">
-                                    <div class="weather-description">loading...</div>
-                                    <div class="min-max-holder">
-                                        <div class="temp-max-holder">
-                                            <i data-feather="arrow-up"></i>
-                                            <div class="temp-max mono">0</div>
-                                        </div>
-                                        <div class="temp-min-holder">
-                                            <i data-feather="arrow-down"></i>
-                                            <div class="temp-min mono">0</div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="weather-icon">
-                        <i data-feather="sun"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+					<div class="weather-icon">
+						<i data-feather="sun"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
