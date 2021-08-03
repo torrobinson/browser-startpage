@@ -17,8 +17,10 @@ For use as either a new-tab page or a homepage in your web browser.
    -  `weatherApiKey` (required) - the API key you generated for yourself, as mentioned above
    -  `col1` (optional) - The primary background gradient color to use (system light mode) (remember to URL-escape the # hex color codes to `%23`)
    -  `col2` (optional) - The secondary background gradient color to use (system light mode) (remember to URL-escape the # hex color codes to `%23`)
+   -  `text-col` (optional) - The text color to use (system light mode) (remember to URL-escape the # hex color codes to `%23`)
    -  `dark-col1` (optional) - The primary background gradient color to use (system dark mode) (remember to URL-escape the # hex color codes to `%23`)
    -  `dark-col2` (optional) - The secondary background gradient color to use (system dark mode) (remember to URL-escape the # hex color codes to `%23`)
+   -  `dark-text-col` (optional) - The text color to use (system dark mode) (remember to URL-escape the # hex color codes to `%23`)
    
 ## Sample Querystring:
 ```
